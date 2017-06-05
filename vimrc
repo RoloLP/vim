@@ -42,8 +42,8 @@ set colorcolumn=80
 set expandtab
 set softtabstop=4
 set shiftwidth=4
-nnoremap ; :
-vnoremap ; :
+nnoremap ;; :
+vnoremap ;; :
 set spell
 set hlsearch
 set incsearch
@@ -54,9 +54,11 @@ set listchars=tab:>~,trail:·
 set autoindent
 set hidden
 
-" Solarized Dark
-set background=dark
+" Solarized 
+set background=light
 colorscheme solarized
+nnoremap da<CR> :set<Space>background=dark<CR>
+nnoremap li<CR> :set<Space>background=light<CR>
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -69,7 +71,7 @@ let g:syntastic_check_on_wq = 0
 map <Leader>s :SyntasticToggleMode<CR>
 
 " NerdTree
-map <C-S-l> :NERDTreeToggle<CR>
+map <S-l> :NERDTreeToggle<CR>
 
 " Slime
 let g:slime_target = "tmux"
