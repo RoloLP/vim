@@ -27,6 +27,7 @@ Plugin 'eagletmt/ghcmod-vim'
 Plugin 'shougo/vimproc.vim'
 Plugin 'lervag/vimtex'
 Plugin 'godlygeek/tabular'
+Plugin 'idris-hackers/idris-vim'
 
 call vundle#end()
 
