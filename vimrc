@@ -28,6 +28,7 @@ Plugin 'shougo/vimproc.vim'
 Plugin 'lervag/vimtex'
 Plugin 'godlygeek/tabular'
 Plugin 'idris-hackers/idris-vim'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 
@@ -54,6 +55,8 @@ set list
 set listchars=tab:>~,trail:·
 set autoindent
 set hidden
+set ignorecase
+set smartcase
 
 " Solarized 
 set background=light
@@ -76,3 +79,12 @@ map <S-l> :NERDTreeToggle<CR>
 
 " Slime
 let g:slime_target = "tmux"
+
+fu! SpaceAway()
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    %s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setpos('/', old_query)
+endfu
+noremap <LEADER>sa :call SpaceAway()<CR>
