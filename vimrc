@@ -29,6 +29,7 @@ Plugin 'lervag/vimtex'
 Plugin 'godlygeek/tabular'
 Plugin 'idris-hackers/idris-vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'julialang/julia-vim'
 
 call vundle#end()
 
